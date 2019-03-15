@@ -33,7 +33,7 @@ node {
     stage('build docker') {
         sh "sudo cp -R src/main/docker target/"
         sh "sudo cp target/*.war target/docker/"
-        dockerImage = docker.build('DownloadLord/Devops', 'target/docker')
+        dockerImage = docker.build('lorddownload/devops-repo', 'target/docker')
     }
 
     stage('publish docker') {
